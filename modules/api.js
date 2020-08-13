@@ -1,10 +1,8 @@
 const fetch = require("node-fetch");
 
-const DEVELOPER_KEY = 'QkJMTkYUlZ25C5UTmXHfA';
-
 const helpers = {
     build_url: isbn => {
-        return 'https://www.goodreads.com/book/isbn/' + isbn + '?format=xml&key=' + DEVELOPER_KEY;
+        return 'https://www.goodreads.com/book/isbn/' + isbn + '?format=xml&key=' + process.env.DEVELOPER_KEY;
     }
 }
 

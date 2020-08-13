@@ -1,7 +1,7 @@
 const { MongoError } = require("mongodb");
 
 const MongoClient = require("mongodb").MongoClient;
-const uri = "mongodb+srv://mumadness:sbbsbb25881763@bookclub.j1vyn.gcp.mongodb.net/local?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.SESSION_SECRET}:${process.env.MONGO_PASSWORD}@bookclub.j1vyn.gcp.mongodb.net/local?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { 
     useNewUrlParser: true,
     useUnifiedTopology: true
