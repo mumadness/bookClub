@@ -1,0 +1,267 @@
+body {
+    color: black;
+}
+
+/*************************************/
+/********** Login styles *************/
+/*************************************/
+
+#welcome-title {
+    width: 100%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#login-form {
+    width: 30%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#login-form input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+#login-form button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 10px;
+    background-color: lightskyblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 20px;
+    color: darkcyan;
+}
+
+/*************************************/
+/********** NAV BAR STYLES ***********/
+/*************************************/
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.member {
+    text-align: center;
+}
+
+#this-username {
+    opacity: 0.7;
+}
+
+#log-out-button {
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: darkcyan;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button:hover{
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+    color: black;
+}
+
+.drop-button {
+    border-radius: 15px 40px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    border: none;
+    width: 100px;
+}
+  
+.dropdown {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+  
+.drop-content {
+    border-radius: 10px 10px 20px 20px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 80px;
+    right: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: green;
+}
+
+.drop-content .option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.option button {
+    text-align: center;
+    color: green;
+    background-color: inherit;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    width: 100%;
+}
+  
+.drop-content div:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+  
+.dropdown:hover .drop-button {
+    background-color: #5da55f;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/*$$$$$$$ END Nav Bar styles $$$$$$$$*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+
+/**********************************************/
+/*********** CHAT MESSAGE STYLES **************/
+/**********************************************/
+
+#chat-history {
+   height: 200px;
+}
+
+/*** PUBLIC BROACAST MESSGAGES (io.broadcast.emit), currently DEPRECATED **/
+.broadcast-message {
+    font-family: 'Noto Sans KR', sans-serif;
+    opacity: 0.7;
+    margin-left: 10%;
+}
+
+/***** CHAT MESSAGE WRAPPER styles, contains meta-information *****/
+.chat-message-wrapper {
+    color: white;
+    border-radius: 10px;
+    border-bottom: 5px;
+    height: auto;
+    position: relative;
+}
+
+.header-info {
+    opacity: 0.5;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 75%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sender {
+    margin: 0 0 0 5px;
+}
+
+.time {
+    margin: 0 10px 0 0;
+}
+
+/**** END WRAPPER STYLES ****/
+
+/* message send by others; SKYBLUE, APPEARS ON LEFT SIDE */
+.msg {
+    min-width: 25%;
+    max-width: 40%;
+    float: left;
+    clear: both;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+.txt {
+    height: auto;
+    word-wrap: break-word;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    display: inline-block;
+}
+/**** END ****/
+
+/* message sent by yourself; GREEN, APPEARS ON RIGHT SIDE */
+.self-msg {
+    margin-top: 0;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 40%;
+    width: auto;
+    right: 10%;
+    display: block;
+    float: right;
+    clear: both;
+}
+
+.self-msg .header-info{
+    display: inline-block;
+}
+
+.self-msg .txt {
+    background-color: #5da55f;
+    display: inline-block;
+    right: 0;
+}
+
+/****** END ******/
+
+#buffer {
+    height: 100px;
+}
+
+/******************************************/
+/******** CHAT SUBMIT FORM styles *********/
+/******************************************/
+.chat-form-wrapper { 
+    border-radius: 30px;
+    border: none;
+    background: #fff;
+    padding: 3px; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+}
+
+form input {
+    border: black;
+    padding: 10px;
+    width: 85%;
+    margin-right: .5%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+
+#chat-form button {
+    border-radius: 20px 10px;
+    width: 9%;
+    color: white;
+    background: #5da55f;
+    border: cornsilk;
+    padding: 10px;
+    margin-left: 2%; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/*$$$$$$$ END CHAT FORM styles $$$$$*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/

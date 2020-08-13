@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ubuntu&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/styles2.css"/>
+    <title>Recommend Book</title>
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class='home'>
+            <form action="/" method="GET">
+                <button class="top-bar-button">Home</button>
+            </form>
+            
+        </div>
+
+        <h2 class="title">Looking for new books?</h2>
+
+        <div class="dropdown">
+            <button class="drop-button">Options</button>
+            <div class="drop-content">
+                <div class="option">
+                    <form action="/all_books" method="GET">
+                        <button>View Books</button>
+                    </form>                
+                </div>
+                
+                <div class="option">
+                    <form action="/add_book" method="GET">
+                        <button>Add Book</button>
+                    </form>
+                </div>
+                
+                <div class="option">
+                    <form action="/recommend_book" method="GET">
+                        <button>Rec Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="rec-amount-wrapper">
+        <p>(Please enter a number between 1 and 5)</p>
+        <form action="/book_rec_results" method="GET" id="book-rec-form">
+            <label for="amount-prompt">Amount: </label>
+            <input id="book-rec-amount" autocomplete="off" autofocus="on" placeholder="Number of books you want us to recommend..."/><br><br>
+            <button id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="logout-form">
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type='submit' id='log-out-button'>Log Out</button>
+        </form>
+    </div>
+
+    <h5 id="error-message"></h5>
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/recommend_books.js"></script>
+    
+
+</body>
+
+</html>

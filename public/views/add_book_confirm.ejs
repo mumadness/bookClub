@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ubuntu&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/styles2.css"/>
+    <title>Confirmation</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class='home'>
+            <form action="/" method="GET">
+                <button class="top-bar-button">Home</button>
+            </form>
+        </div>
+
+        <h1 class="title"></h1>
+
+        <div class="dropdown">
+            <button class="top-bar-button">Options</button>
+            <div class="drop-content">
+                <div class="option">
+                    <form action="/all_books" method="GET">
+                        <button>View Books</button>
+                    </form>                
+                </div>
+                
+                <div class="option">
+                    <form action="/add_book" method="GET">
+                        <button>Add Book</button>
+                    </form>
+                </div>
+                
+                <div class="option">
+                    <form action="/recommend_book" method="GET">
+                        <button>Recommend Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmation-msg-wrapper">
+        <h2 id="success-msg">One book added successfully!</h2>
+        <br><br><br>
+        <h3 id="add-another-prompt">Would you like to add another one?</h3>
+    </div>
+
+    <br>
+
+    <div id="decision-bar-wrapper">
+
+        <div id="yes-button">
+            <form action="/add_book" method="GET" id="yes-form">
+                <button>Yes</button>
+            </form>
+        </div>
+
+        <div id="no-button">
+            <form action="/" method="GET" id="no-form">
+                <button>No</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="logout-form">
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type='submit' id='log-out-button'>Log Out</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

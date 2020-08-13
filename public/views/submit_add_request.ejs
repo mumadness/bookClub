@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ubuntu&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/styles2.css"/>
+    <title>Submit</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class='home'>
+            <form action="/" method="GET">
+                <button class="top-bar-button">Home</button>
+            </form>
+        </div>
+
+        <h1 class="title"></h1>
+
+        <div class="dropdown">
+            <button class="drop-button">Options</button>
+            <div class="drop-content">
+                <div class="option">
+                    <form action="/all_books" method="GET">
+                        <button>View Books</button>
+                    </form>                
+                </div>
+                
+                <div class="option">
+                    <form action="/add_book" method="GET">
+                        <button>Add Book</button>
+                    </form>
+                </div>
+                
+                <div class="option">
+                    <form action="/recommend_book" method="GET">
+                        <button>Rec Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="book-info-wrapper">
+        <h2 id="success-msg"></h2>
+
+        <table id="book-info-table">
+            <tr>
+                
+            </tr>
+        </table>
+
+    </div>
+
+    <br><br>
+
+    <div id="decision-bar-wrapper">
+
+        <div id="confirm-button">
+            <form action="/add_book_confirm" method="GET" id="confirmation-form">
+                <button>Confirm</button>
+            </form>
+        </div>
+
+        <div id="back-button">
+            <form action="/add_book" method="GET" id="back-form">
+                <button>Back</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="logout-form">
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type='submit' id='log-out-button'>Log Out</button>
+        </form>
+    </div>
+
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/add_book_confirm.js"></script>
+</body>
+
+</html>

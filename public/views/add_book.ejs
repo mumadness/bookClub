@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Ubuntu&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/styles2.css"/>
+    <title>Add Book</title>
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class='home'>
+            <form action="/" method="GET">
+                <button class="top-bar-button">Home</button>
+            </form>
+            
+            
+        </div>
+
+        <h1 class="title">Add a Book!</h1>
+
+        <div class="dropdown">
+            <button class="drop-button">Options</button>
+            <div class="drop-content">
+                <div class="option">
+                    <form action="/all_books" method="GET">
+                        <button>View Books</button>
+                    </form>                
+                </div>
+                
+                <div class="option">
+                    <form action="/add_book" method="GET">
+                        <button>Add Book</button>
+                    </form>
+                </div>
+                
+                <div class="option">
+                    <form action="/recommend_book" method="GET">
+                        <button>Rec Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="isbn-form-wrapper">
+        <form action="/submit_request" method="GET" id="isbn-form">
+            <label for="isbn-prompt">By ISBN: </label>
+            <input id="isbn-input" autocomplete="off" autofocus="on" placeholder="Enter the ISBN of the book you'd like to add..."/><br><br>
+            <button id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="logout-form">
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type='submit' id='log-out-button'>Log Out</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/add_book.js"></script>
+    
+
+</body>
+
+</html>

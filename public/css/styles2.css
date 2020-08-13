@@ -1,0 +1,239 @@
+body {
+    color: black;
+}
+
+/*************************************/
+/********** NAV BAR STYLES ***********/
+/*************************************/
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#log-out-button {
+    position: fixed;
+    bottom: 5px;
+    width: 10%;
+    border: none;
+    background-color: lightskyblue;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.top-bar-button {
+    text-align: center;
+    background-color: #5da55f;
+}
+
+.title {
+    text-align: center;
+    color: black;
+}
+
+.drop-button {
+    border-radius: 15px 40px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    border: none;
+    width: 100px;
+}
+  
+.dropdown {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+  
+.drop-content {
+    border-radius: 10px 10px 20px 20px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 80px;
+    right: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: green;
+}
+
+.drop-content .option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.option button {
+    text-align: center;
+    color: green;
+    background-color: inherit;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    width: 100%;
+}
+  
+.drop-content div:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+  
+.dropdown:hover .drop-button {
+    background-color: #5da55f;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/*$$$$$$$ END Nav Bar styles $$$$$$$$*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+
+
+.book-object-attribute {
+    height: 35px;
+}
+
+.key {
+    vertical-align: text-top;
+    text-align: right;
+}
+
+.value {
+    vertical-align: text-top;
+    padding-left: 50px;
+    text-align: left;
+}
+
+#isbn-form {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2%;
+    margin-top: 100px;
+    height: 200px;
+}
+
+form input {
+    border: black;
+    padding: 10px;
+    width: 85%;
+    margin-right: .5%;
+    font-size: 15px;
+}
+
+form button {
+    border-radius: 10px;
+    color: white;
+    background: lightseagreen;
+    border: cornsilk;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#decision-bar-wrapper {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#confirmation-msg-wrapper {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#success-msg {
+    text-align: center;
+    width: 100%;
+}
+
+#add-another-prompt {
+    text-align: left;
+}
+
+
+
+/*****************************
+**** all_books.html styles ***
+*****************************/
+
+table {
+    border-collapse: separate;
+    border-spacing: 80px 20px;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#all-books-header {
+    justify-content: space-between;
+    font-size: 150%;
+}
+
+#all-books {
+    width: 100%;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.one-book {
+    font-size: 100%;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: right;
+    margin-right: 5%;
+}
+
+.author {
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+h5 {
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    color: grey;
+}
+
+/**** recommend_books.html ****/
+#rec-amount-wrapper {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2%;
+    margin-top: 100px;
+    height: 200px;
+}
+
+div p{
+    opacity: 0.5;
+}
+
+#book-rec-results {
+    width: 100%;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/**** book_rec_results.html ****/
+.add-book-button {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: lightskyblue;
+    border-radius: 10px 5px;
+    border: 0;
+}
+
+.add-book-button:hover {
+    background-color: darkcyan;
+    opacity: 0.7;
+}
